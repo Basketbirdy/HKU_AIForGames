@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: YellowBoid
   m_EditorClassIdentifier: 
   maxSpeed: 0.2
-  maxForce: 0.2
+  maxForce: 0
   obj: {fileID: 4110752178308812840, guid: d33b2a6b6c9765546bb9af658220b6fe, type: 3}

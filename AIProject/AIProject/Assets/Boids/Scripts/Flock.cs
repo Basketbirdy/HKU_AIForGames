@@ -15,6 +15,7 @@ public class Flock
     [SerializeField] private bool followsTarget;
     [SerializeField] private Transform target;
     [Range(0, 100)] [SerializeField] private int targetWeight = 1;
+    [Space]
     [SerializeField] private bool isContained = false;
     [SerializeField] private float containStrength = 10f;
     [SerializeField] Vector2 xMinMax;

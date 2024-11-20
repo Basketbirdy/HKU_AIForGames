@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BoidManager : MonoBehaviour
 {
-    [SerializeField] private GameObject boidPrefab;
     [SerializeField] private Flock[] flocks;
 
     private void Start()

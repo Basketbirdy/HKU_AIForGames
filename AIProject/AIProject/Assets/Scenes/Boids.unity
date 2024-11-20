@@ -437,33 +437,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69b8cdd33e513d540b65b4b20215928c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boidPrefab: {fileID: 0}
   flocks:
   - amount: 20
     seperationDistance: 3
     possibleBoids:
     - {fileID: 11400000, guid: 9282c816af1bdf24cb0246a255e43b76, type: 2}
-    followsTarget: 0
-    target: {fileID: 881243302}
-    targetWeight: 1
-    isContained: 1
-    containStrength: 3
-    xMinMax: {x: -50, y: 50}
-    yMinMax: {x: -50, y: 50}
-    zMinMax: {x: -30, y: 30}
-    flockId: 0
-  - amount: 5
-    seperationDistance: 2
-    possibleBoids:
-    - {fileID: 11400000, guid: 776fa3f54d836b749bb03c5997b8feac, type: 2}
     followsTarget: 1
     target: {fileID: 881243302}
     targetWeight: 1
     isContained: 1
-    containStrength: 3
-    xMinMax: {x: -50, y: 50}
-    yMinMax: {x: -50, y: 50}
-    zMinMax: {x: -30, y: 30}
+    containStrength: 5
+    xMinMax: {x: -20, y: 20}
+    yMinMax: {x: -20, y: 20}
+    zMinMax: {x: -20, y: 20}
     flockId: 0
 --- !u!4 &1474504012
 Transform:
