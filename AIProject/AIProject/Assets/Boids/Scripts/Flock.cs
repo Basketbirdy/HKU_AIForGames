@@ -10,6 +10,7 @@ namespace Boids
     {
         [Header("Flock Options")]
         [SerializeField] private int amount;
+        [SerializeField] private float StartingVelocityRange = 1;
         [SerializeField] private BoidData[] possibleBoids;
 
         [Header("Rules")]
@@ -40,10 +41,12 @@ namespace Boids
 
             // spawn boids
             boids = new Boid[amount];
+            Vector3 startV = new Vector3(Random.Range(-StartingVelocityRange, StartingVelocityRange), Random.Range(-StartingVelocityRange, StartingVelocityRange), Random.Range(-StartingVelocityRange, StartingVelocityRange));
+
             for (int i = 0; i < boids.Length; i++)
             {
                 // run boid setup
-                boids[i] = new Boid(GetBoidData());
+                boids[i] = new Boid(GetBoidData(), startV);
             }
         }
 

@@ -438,7 +438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   flocks:
-  - amount: 50
+  - amount: 100
     possibleBoids:
     - {fileID: 11400000, guid: 9282c816af1bdf24cb0246a255e43b76, type: 2}
     cohesionWeight: 0.3
@@ -448,6 +448,38 @@ MonoBehaviour:
     followsTarget: 0
     target: {fileID: 881243302}
     targetWeight: 0.1
+    isContained: 1
+    containWeight: 2
+    xMinMax: {x: -36, y: 36}
+    yMinMax: {x: -20, y: 20}
+    zMinMax: {x: -20, y: 20}
+    flockId: 0
+  - amount: 100
+    possibleBoids:
+    - {fileID: 11400000, guid: 776fa3f54d836b749bb03c5997b8feac, type: 2}
+    cohesionWeight: 0.3
+    seperationWeight: 0.8
+    seperationDistance: 2
+    alignmentWeight: 0.3
+    followsTarget: 0
+    target: {fileID: 881243302}
+    targetWeight: 0.1
+    isContained: 1
+    containWeight: 2
+    xMinMax: {x: -36, y: 36}
+    yMinMax: {x: -20, y: 20}
+    zMinMax: {x: -20, y: 20}
+    flockId: 0
+  - amount: 25
+    possibleBoids:
+    - {fileID: 11400000, guid: 67ee8708c51670649bdee8577515ccd4, type: 2}
+    cohesionWeight: 0.3
+    seperationWeight: 0.8
+    seperationDistance: 2
+    alignmentWeight: 0.3
+    followsTarget: 1
+    target: {fileID: 881243302}
+    targetWeight: 7
     isContained: 1
     containWeight: 2
     xMinMax: {x: -36, y: 36}

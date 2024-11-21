@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5890328e99debbc45b5172660c48ea08, type: 3}
-  m_Name: RedBoid
+  m_Name: GreenBoid
   m_EditorClassIdentifier: 
-  maxSpeed: 2
-  obj: {fileID: 8541712041424704907, guid: 38ab09f0015cf1c469ce2d6941735117, type: 3}
+  maxSpeed: 1
+  obj: {fileID: 1820779068056573692, guid: bae5e7247c1b9874487f9f414e26a724, type: 3}

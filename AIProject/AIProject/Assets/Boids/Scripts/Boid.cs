@@ -14,7 +14,7 @@ namespace Boids
         public BoidData Data { get; private set; }
         public GameObject BoidObj { get; private set; }
 
-        public Boid(BoidData _data)
+        public Boid(BoidData _data, Vector3 _startVel)
         {
             // insertion
             Data = _data;
@@ -23,6 +23,7 @@ namespace Boids
             BoidObj = GameObject.Instantiate(Data.obj);
             Vector3 offset = new Vector3(Random.Range(-randomOffset, randomOffset), Random.Range(-randomOffset, randomOffset), Random.Range(-randomOffset, randomOffset));
             BoidObj.transform.position += offset;
+            Velocity = _startVel;
         }
 
         // boid functions
