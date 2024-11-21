@@ -2,30 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BoidManager : MonoBehaviour
+namespace Boids
 {
-    [SerializeField] private Flock[] flocks;
-
-    private void Start()
+    public class BoidManager : MonoBehaviour
     {
-        System.DateTime start = System.DateTime.Now;
+        [SerializeField] private Flock[] flocks;
 
-        // foreach flock
-        for(int i = 0; i < flocks.Length; i++)
+        private void Start()
         {
-            flocks[i].Setup(i);
+            System.DateTime start = System.DateTime.Now;
+
+            // foreach flock
+            for(int i = 0; i < flocks.Length; i++)
+            {
+                flocks[i].Setup(i);
+            }
+
+            System.TimeSpan duration = System.DateTime.Now - start;
+            Debug.Log($"Duration: {duration.Milliseconds} milliseconds");
         }
 
-        System.TimeSpan duration = System.DateTime.Now - start;
-        Debug.Log($"Duration: {duration.Milliseconds} milliseconds");
-    }
-
-    private void FixedUpdate()
-    {
-        for(int i = 0; i < flocks.Length; i++)
+        private void FixedUpdate()
         {
-            flocks[i].UpdateFlock();
+            for(int i = 0; i < flocks.Length; i++)
+            {
+                flocks[i].UpdateFlock();
+            }
         }
-    }
 
+        private void OnDrawGizmos()
+        {
+            for (int i = 0; i < flocks.Length; i++)
+            {
+                Gizmos.DrawWireCube(Vector3.zero, flocks[i].GetContainArea());
+            }
+        }
+
+    }
 }
