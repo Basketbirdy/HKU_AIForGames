@@ -480,10 +480,10 @@ MonoBehaviour:
     seperationWeight: 0.8
     seperationDistance: 2
     alignmentWeight: 0.3
-    followsTarget: 1
+    followsTarget: 0
     target: {fileID: 881243302}
     targetWeight: 7
-    isContained: 0
+    isContained: 1
     containWeight: 2
     xMinMax: {x: -36, y: 36}
     yMinMax: {x: -20, y: 20}
